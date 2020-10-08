@@ -1,0 +1,29 @@
+<div class="app-root">
+  <div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+  <div class="container">
+    <div class="col-sm-4 text-center" style="width:500px;height:600px;">
+      <h2 class="text-center">Pie chart using Chartjs and Angular 9</h2>
+      <div class="chart" #screen id="myscreen">
+        <canvas baseChart width="500" height="500" 
+        [data]="pieChartData" 
+        [chartType]="pieChartType" 
+        [options]="pieChartOptions" 
+        [colors]="pieChartColors" 
+        [legend]="pieChartLegend">
+        </canvas>
+      </div>
+      <div>
+        <button (click)="downloadImage()" type="button">Exportar</button>
+    </div>
+    <!--
+      <div id="download">
+        <img #canvas>
+        <a #downloadLink></a>
+      </div>
+    -->
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
